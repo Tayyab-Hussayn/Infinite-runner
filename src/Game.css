@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #FF6B35, #F7931E);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  background: #1A1A2E;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  border: 4px solid #00F5FF;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  color: #00F5FF;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #FF1744, #E91E63);
+  border-radius: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 15px rgba(255,23,68,0.4);
+}
+
+.game-area {
+  position: relative;
+  width: 1200px;
+  height: 600px;
+  background: #16213E;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 4px solid #00F5FF;
+  box-shadow: inset 0 0 20px rgba(0,245,255,0.3);
+}
+
+.track-line {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #00F5FF;
+  opacity: 1;
+  box-shadow: 0 0 8px #00F5FF;
+}
+
+.car {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  border-radius: 12px;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Vibrant Doraemon */
+.doraemon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #00BFFF;
+  border-radius: 50%;
+  border: 4px solid #FFFFFF;
+  z-index: 10;
+  box-shadow: 0 6px 20px rgba(0,191,255,0.6);
+}
+
+.doraemon-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.doraemon-eyes {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.eye {
+  width: 8px;
+  height: 8px;
+  background: #000000;
+  border-radius: 50%;
+}
+
+.doraemon-nose {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background: #FF1744;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #FF1744;
+}
+
+.doraemon-mouth {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 6px;
+  border: 2px solid #000000;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  background: transparent;
+}
+
+.doraemon-bell {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #FFD700;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 8px #FFD700;
+}
+
+/* Remove all complex animations and effects */
+.player {
+  animation: none;
+}
+
+.car-windshield,
+.car-wheels,
+.car-lights,
+.wheel,
+.headlight {
+  display: none;
+}
+
+/* Remove road texture animation */
+.game-area::before {
+  display: none;
+}
+
+@keyframes spin {
+  display: none;
+}
+
+@keyframes roadMove {
+  display: none;
+}
